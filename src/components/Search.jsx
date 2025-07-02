@@ -12,9 +12,11 @@ const BarSearch = styled.div`
   overflow: hidden;
   border-radius: 6px;
   max-width:600px;
-  margin:0 auto;
+  margin:2rem auto 2em;
+  
 
   & input{
+    background:#f2f2f2;
     height:40px;
     width:100%;
     border:0;

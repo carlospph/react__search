@@ -8,6 +8,12 @@
   box-sizing: border-box;
 }
 
+.banner{
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
 .container{
   padding:1rem;
   max-width:1140px;
@@ -16,4 +22,17 @@
 
  .section__init{
    margin: 2rem 0 0 0;
+ }
+
+ label{
+  display: block;
+  font-weight: 700;
+  margin-top: 0.6em;
+ }
+
+ input{
+  height: 46px;
+  padding: 0 6px;
+  border: 0;
+  border-radius: 5px;
  }

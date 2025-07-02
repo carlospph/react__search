@@ -1,11 +1,15 @@
-import Cards from './Cards';
+import Banner from './Banner';
+ import FormCadastro from './FormCadastro';
 import Search from './Search';
 
-function ScreenSearch() {
+ 
+
+function ScreenSearch() { 
   return (
     <div className="container">
+      <Banner />
       <Search />
-      <Cards />
+      <FormCadastro/>
     </div>
   );
 }
