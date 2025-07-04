@@ -1,9 +1,10 @@
-// src/components/FormularioCadastro.jsx (ou .js)
 import React from 'react';
-import FieldText from './FieldText'; // Certifique-se de que o caminho está correto
+import FieldText from './FieldText';
 import styled from 'styled-components';
+import ListaSuspensa from './ListaSuspensa';
+import Button from './Button';
 
-const FormContainer = styled.div`
+const FormContainer = styled.form`
   background: #f2f2f2;
   border-radius: 5px;
   overflow: hidden;
@@ -17,15 +18,38 @@ const FormContainer = styled.div`
 `;
 
 function FormCadastro() {
-  const Nomecompleto = "Nome Completo";
-  const Cargo = "Cargo";
-  const Endereco = "Endereço Completo";
+  const times = [
+    'Designers',
+    'Analistas dev',
+    'Desenvolvedores',
+    'Suporte técnico'];
+
+  const aoSalvar = (evento) => {
+    evento.preventDefault();
+    console.log('Formulário enviado');
+  };
 
   return (
-    <FormContainer>
-      <FieldText campo={Nomecompleto} />
-      <FieldText campo={Cargo} />
-      <FieldText campo={Endereco} />
+    <FormContainer onSubmit={aoSalvar}>
+
+      <FieldText label="Nome completo"
+        name="nome"
+        placeholder="Nome completo"
+        obrigatorio={true} />
+
+      <FieldText label="Cargo"
+        name="cargo"
+        placeholder="Cargo"
+        obrigatorio={true} />
+
+      <FieldText label="Endereço da imagem"
+        name="enderecoImagem"
+        placeholder="Endereço da imagem (opcional)"
+        obrigatorio={true} />
+
+
+      <ListaSuspensa times={times} label="Times" />
+      <Button>Criar card</Button>
     </FormContainer>
   );
 }

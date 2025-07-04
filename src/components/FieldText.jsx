@@ -1,10 +1,9 @@
-function FieldText({ campo }) {
-
+function FieldText( props ) {
     return (
         <>
-            <label>{campo}</label>
-            <input type="text" placeholder={campo} />
-        </>
+            <label> {props.label}</label>
+            <input type="text" name={props.name} placeholder={props.placeholder} required={props.obrigatorio}/>
+         </>
     )
 }
 

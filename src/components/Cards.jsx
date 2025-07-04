@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-// Não precisamos mais do import de 'react-icons' aqui!
 
 const Container = styled.div`
   margin: 1rem auto;
@@ -48,12 +47,10 @@ const Title = styled.h4`
   margin: 0;
 `;
 
-// Estilização para o ícone (opcional, mas útil para controlar o tamanho e cor via styled-components)
-const Icon = styled.i`
-  font-size: 24px; /* Ajuste o tamanho do ícone */
-  color: #005390; /* Ajuste a cor do ícone */
+ const Icon = styled.i`
+  font-size: 24px;  
+  color: #005390;  
 `;
-
 
 const Category = styled.p`
   font-size: 15px;
@@ -90,8 +87,7 @@ function Cards() {
       <Card>
         <Cardbody>
           <TitleWrapper>
-            {/* Ícone Font Awesome: `fa-solid` para sólido, `fa-laptop-code` para o ícone específico */}
-            <Icon className="fa-solid fa-laptop-code"></Icon>
+             <Icon className="fa-solid fa-laptop-code"></Icon>
             <Title>Desenvolvimento Web Fullstack</Title>
           </TitleWrapper>
           <Category>Programação & Design</Category>
@@ -107,8 +103,7 @@ function Cards() {
       <Card>
         <Cardbody>
           <TitleWrapper>
-            {/* Ícone Font Awesome: `fa-solid fa-mobile-alt` */}
-            <Icon className="fa-solid fa-mobile-alt"></Icon>
+             <Icon className="fa-solid fa-mobile-alt"></Icon>
             <Title>Desenvolvimento Mobile Nativo</Title>
           </TitleWrapper>
           <Category>Aplicativos & Experiência do Usuário</Category>
@@ -123,8 +118,7 @@ function Cards() {
       <Card>
         <Cardbody>
           <TitleWrapper>
-            {/* Ícone Font Awesome: `fa-solid fa-cloud` */}
-            <Icon className="fa-solid fa-cloud"></Icon>
+             <Icon className="fa-solid fa-cloud"></Icon>
             <Title>Computação em Nuvem e DevOps</Title>
           </TitleWrapper>
           <Category>Infraestrutura & Automação</Category>
